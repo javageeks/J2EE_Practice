@@ -31,10 +31,15 @@
     	<welcome-file>dataentry.html</welcome-file>
   	</welcome-file-list>
   	
-  	<!--  Request Dispatcher 
+  	
 	<servlet>
 		 <servlet-name>Login</servlet-name>
 		 <servlet-class>org.greenhorn.servlets.practice.Validation</servlet-class>
+		 <init-param>
+			 <param-name>userName</param-name>
+			 <param-value>HUSSAIN</param-value>
+		 </init-param>
+		 
 	</servlet>
 	<servlet>
 	<servlet-name>Welcome</servlet-name>
@@ -50,7 +55,7 @@
 	</servlet-mapping>
  	<welcome-file-list>
  		<welcome-file>index.html</welcome-file>
- 	</welcome-file-list>  -->
+ 	</welcome-file-list> 
 	
 
 </web-app>

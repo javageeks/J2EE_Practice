@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -15,14 +16,16 @@ public class Validation extends HttpServlet
        throws ServletException, IOException 
    {        
        response.setContentType("text/html");      
-       PrintWriter pwriter = response.getWriter();                
+       PrintWriter pwriter = response.getWriter();
+      
+      
        String name=request.getParameter("uname");      
        String pass=request.getParameter("upass");                
        if(name.equals("j2ee") && 
           pass.equals("practice"))
        {          
           RequestDispatcher dis=request.getRequestDispatcher("welcome");          
-          dis.forward(request, response);      
+          dis.forward(request, response);    
        }     
        else
        {      
